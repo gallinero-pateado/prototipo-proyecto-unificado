@@ -22,7 +22,7 @@ const MainPage = () => {
                 <Link to="/roomies" className="flex-1 flex flex-col justify-start items-center bg-[#0092BC] text-white text-center transition duration-300 ease-in-out hover:bg-gray-800 p-8">
                     <div className="text-2xl mb-2">Rommies</div>
                 </Link>
-                <Link to="/user-profile" className="flex-1 flex flex-col justify-start items-center bg-[#A3D9D3] text-[#333] text-center transition duration-300 ease-in-out hover:bg-gray-800 p-8">
+                <Link to="/search" className="flex-1 flex flex-col justify-start items-center bg-[#A3D9D3] text-[#333] text-center transition duration-300 ease-in-out hover:bg-gray-800 p-8">
                     <div className="text-2xl mb-2">Practica</div>
                     
                 </Link>

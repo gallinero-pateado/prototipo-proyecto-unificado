@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import imagen2 from '../imagen/imagen2.png';
 
-const Logout = () => {
+const LogoutEm = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -44,4 +44,4 @@ const Logout = () => {
     );
 };
 
-export default Logout;
+export default LogoutEm;
