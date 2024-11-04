@@ -4,7 +4,7 @@ import (
 	"backend/API/config"
 	"backend/API/database"
 	"backend/API/handlers"
-	//"backend/API/models"
+	"backend/API/models"
 	"fmt"
 	"log"
 
@@ -40,7 +40,7 @@ func main() {
 	router.GET("/UsuarioRoomie/:Id", handlers.GetUsuarioRoomie(db))  // Lectura de un roomie por ID
 	router.GET("/UsuarioRoomies", handlers.GetallUsuariosRoomie(db)) // Lectura de todos los roomies
 	router.GET("/favorites/:Id", handlers.GetFavoritos(db))          // Lectura de los favoritos de un usuario por id
-
+	router.GET("/filterUsuarios", handlers.FilterUsuarios(db))         // Nueva ruta de filtrado
 	// Update
 	router.PUT("/Usuario/:Id", handlers.UpdateUsuario(db))             // Actualización de un usuario por ID
 	router.PUT("/UsuarioRoomie/:Id", handlers.UpdateUsuarioRoomie(db)) // Actualización de un roomie por ID
