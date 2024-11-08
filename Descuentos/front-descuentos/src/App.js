@@ -1,5 +1,5 @@
 import React, { useState, useEffect, Suspense, lazy } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import productsFromFile from './components/cupones.json'; // Productos locales
 import axios from 'axios';
 import { v4 as uuidv4 } from 'uuid';
@@ -192,11 +192,13 @@ function App() {
     <Router>
       <Suspense fallback={<LoadingMessage message="Cargando componentes..." />}>
         <Routes>
-        <Route path='/main'  index element={<MainPage />} />
+      {/* Redirección de la ruta raíz (/) hacia /main */}
+      <Route path="/" element={<Navigate to="/main" replace />} />
+      <Route path="/main" element={<MainPage />} />
           <Route path="/Descuentos" element={
             <div className={`min-h-screen text-center relative ${theme === 'dark' ? 'bg-gray-900 text-white' : 'bg-[#DAEDF2] text-black'}`}>
-              <Header /> {/* Manda el header */}
-              <DarkModeToggle theme={theme} toggleTheme={toggleTheme} /> {/* Botón para alternar modo oscuro */}
+              <Header theme={theme} toggleTheme={toggleTheme} />{/* Manda el header */}
+              
 
               {/* Mensajes de estado */}
               {isLoading && <LoadingMessage message="Cargando productos..." />}
