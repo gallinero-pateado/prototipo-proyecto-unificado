@@ -17,7 +17,10 @@ Ejecutar "npm install" para instalar dependecias
 Para la parte algunos iconos se utilizo lucid-react, por lo que se debe instalar a traves de la terminal si es que no esta "npm install lucide-react"
 
 
-Ejecutar "npm install" para instalar dependencias
+Ejecutar 
+```
+npm install" para instalar dependencias
+```
 
 Ejecutar "npm install react-leaflet leaflet" para la ubicación
 
