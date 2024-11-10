@@ -22,21 +22,21 @@ Ejecutar
 npm install" para instalar dependencias
 ```
 
-Ejecutar "npm install react-leaflet leaflet" para la ubicación
+Ejecutar ```npm install react-leaflet leaflet" para la ubicación```
 
-Ejecutar "pip install requests" para solicitudes HTTP
+Ejecutar ```pip install requests" para solicitudes HTTP```
 
-Ejecutar "pip install beautifulsoup4" para web scraping
+Ejecutar ```pip install beautifulsoup4" para web scraping```
 
-Ejecutar "npm install react-modal" para para usar modal
+Ejecutar ```npm install react-modal" para para usar modal```
 
-Ejecutar "npm install axios" ¡Importante!
+Ejecutar ```npm install axios" ¡Importante!```
 
-Ejecutar "npm install uuid" para evitar errores de id de los productos
+Ejecutar ```npm install uuid``` para evitar errores de id de los productos
 
-Ejecutar "npm install react-slider" para usar el rango de precios
+Ejecutar ```npm install react-slider```  para usar el rango de precios
 
-Ejecutar con "npm start"
+Ejecutar con ```npm start```
 
 
 NOTA:
