@@ -34,13 +34,27 @@ Ejecutar
 Ejecutar 
 ```npm install react-modal" para para usar modal```
 
-Ejecutar ```npm install axios" ¡Importante!```
+Ejecutar 
+```
+npm install axios" ¡Importante!
+```
 
-Ejecutar ```npm install uuid``` para evitar errores de id de los productos
+Ejecutar 
+```
+npm install uuid
+```
+para evitar errores de id de los productos
 
-Ejecutar ```npm install react-slider```  para usar el rango de precios
+Ejecutar 
+```
+npm install react-slider
+```
+## para usar el rango de precios
 
-Ejecutar con ```npm start```
+Ejecutar con 
+```
+npm start
+```
 
 
 NOTA:
