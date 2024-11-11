@@ -23,16 +23,24 @@ npm install" para instalar dependencias
 ```
 
 Ejecutar 
-```npm install react-leaflet leaflet" para la ubicación```
+```
+npm install react-leaflet leaflet" para la ubicación
+```
 
 Ejecutar 
-```pip install requests" para solicitudes HTTP```
+```
+pip install requests" para solicitudes HTTP
+```
 
 Ejecutar 
-```pip install beautifulsoup4" para web scraping```
+```
+pip install beautifulsoup4" para web scraping
+```
 
 Ejecutar 
-```npm install react-modal" para para usar modal```
+```
+npm install react-modal" para para usar modal
+```
 
 Ejecutar 
 ```
