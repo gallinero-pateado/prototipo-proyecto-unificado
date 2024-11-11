@@ -81,7 +81,7 @@ const CompleteProfile = () => {
             });
 
             if (response.data.message === "Perfil actualizado correctamente") {
-                navigate('/user-profile'); // Redirigir a perfil de usuario
+                navigate('/search'); // Redirigir a perfil de usuario
             } else {
                 setError('Error al completar el perfil: ' + response.data.message);
             }
