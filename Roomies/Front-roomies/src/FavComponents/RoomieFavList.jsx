@@ -2,8 +2,17 @@ import { useEffect, useState } from "react";
 import  {RoomieCard}  from "../RoomiesComponents/RoomieCard";
 import intereses from "../Const/intereses";
 import preferences from "../Const/preferences";
+import Filter from '../FilterComponent/Filter';
 
 export function RoomiesFavList() {
+
+    const [filters, setFilters] = useState({
+        comuna: '',
+        intereses: [],
+        preferencias: [],
+        carrera: '',
+    });
+
     const [favoriteUsers, setFavoriteUsers] = useState([]);
     const [loading, setLoading] = useState(true); 
     const [error, setError] = useState(null);
@@ -60,26 +69,66 @@ export function RoomiesFavList() {
         return <div>Error: {error}</div>;
     }
     */
+    const handleFilter = (newFilters) => {
+        setFilters(newFilters);
+    };
+
+    const filteredUsers = favoriteUsers.filter((user) => {
+        const matchesComuna = filters.comuna ? user.ubicacion === filters.comuna : true;
+        const matchesIntereses = filters.intereses.length ? filters.intereses.every((interes) => user.intereses.includes(interes)) : true;
+        const matchesPreferencias = filters.preferencias.length ? filters.preferencias.every((preferencia) => user.preferencias.includes(preferencia)) : true;
+        const matchesCarrera = filters.carrera ? user.carrera === filters.carrera : true;
+        return matchesComuna && matchesIntereses && matchesPreferencias && matchesCarrera;
+    });
+
+    if (loading) {
+        return <div>Cargando...</div>;
+    }
+
+    if (error) {
+        return <div>Error: {error}</div>;
+    }
     
-
-
-    return (
+    const renderFilteredUsers = (filteredUsers) => (
+        <section className="flex flex-wrap gap-4 p-4">
+            {filteredUsers.map((user) => (
+                <RoomieCard
+                    key={user.id}
+                    id={user.id}
+                    userName={user.userName}
+                    info={user.info}
+                    ubicacion={user.ubicacion}
+                />
+            ))}
+        </section>
+    );
+    
+    const renderFavoriteUsers = (favoriteUsers) => (
         <section className="flex flex-wrap gap-4 p-4">
             {favoriteUsers.map((user) => (
                 <RoomieCard
                     key={user.id}
                     id={user.id}
                     userName={user.userName}
-                    correo = {user.correo}
+                    correo={user.correo}
                     biografia={user.biografia}
                     ubicacion={user.ubicacion}
-                    intereses = {user.intereses}
-                    preferencias = {user.preferencias}
-                    carrera = {user.carrera}
+                    intereses={user.intereses}
+                    preferencias={user.preferencias}
+                    carrera={user.carrera}
                     genero={user.genero}
-
                 />
             ))}
         </section>
     );
+    
+    const RoomieFavList = ({ filteredUsers, favoriteUsers, handleFilter }) => {
+        return (
+            <div className="container mx-auto p-4">
+                <Filter onFilter={handleFilter} />
+                {renderFilteredUsers(filteredUsers)}
+                {renderFavoriteUsers(favoriteUsers)}
+            </div>
+        );
+    };
 }
