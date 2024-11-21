@@ -6,11 +6,6 @@ El diseño esta hecho con tailwind CSS
 
 Para poder usarlo se debe de tener node.js https://nodejs.org/en/download/prebuilt-installer
 
-Tambien se debe tener instalado go https://go.dev/dl/
-
-Tambien asegurarse de instalar middleware cors para manejar solicitudes CORS en el terminal con la ubicacion de la carpeta backend "go get github.com/gin-contrib/cors" ¡Importante ejecutar el comando con la ruta de la carpeta backend!
-
-Antes de ejecutar el servidor importante iniciar servidor Go "go run main.go" ¡Importante ejecutar el comando con la ruta de la carpeta backend!
 
 Ejecutar "npm install" para instalar dependecias
 
@@ -67,7 +62,4 @@ Ejecutar con
 npm start
 ```
 
-
-NOTA:
-Los datos estan extraídos mediantes web-scraping, el script es scrapingburgerking.py
-para acceder a nuevos datos de la página ejecutar el script.
+## Para ver los productos se debe ejecutar el backend de descuentos

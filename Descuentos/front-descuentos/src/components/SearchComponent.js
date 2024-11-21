@@ -18,7 +18,7 @@ function SearchComponent({ products, setFilteredProducts, theme }) {
       type="text"
       placeholder="Buscar productos..."
       onChange={handleSearch}
-      maxLength={50} // Establece un límite de caracteres
+      maxLength={50} // Establecer un límite de caracteres
       className={`p-2 w-60 border rounded text-center ${
         theme === 'dark' ? 'bg-gray-800 text-white placeholder-gray-400' : 'bg-white text-black placeholder-gray-600'
       }`}
