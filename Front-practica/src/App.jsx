@@ -21,8 +21,14 @@ import Dpractica from './components_crud/dpractica'; // Componente para eliminar
 import Gpracticas from './components_crud/gpracticas'; // Componente para que las empresas lean prácticas
 
 import PracticasList from './components_busqueda/search';
+
 import PostulacionPractica from './components_postulacion/postulacion_practica';
-import MainPage from './mainpage'; // Componente para la página de opciones
+
+import TemasList from './components_foro/leerforo';
+import CrearTemaForm from './components_foro/creartema';
+import CommentEdit from './components_foro/actualizarcomentario';
+import CrearComentario from './components_foro/crearcomentario';
+import ReplyComment from './components_foro/respondercomentario';
 
 
 const App = () => {
@@ -37,6 +43,8 @@ const App = () => {
           <Route path="register_em" element={<RegisterEm />} />
           <Route path="complete_profile" element={<CompleteProfile />} />
           <Route path="password_recovery" element={<PasswordResetForm />} />
+
+
         </Route>
 
         {/* Rutas con el segundo Layout (Layout2) */}
@@ -46,6 +54,13 @@ const App = () => {
         <Route path="/rpractica" element={<Layout2><Rpractica /></Layout2>} />
         <Route path="/search" element={<Layout2><PracticasList /></Layout2>} />
         <Route path="/postulacion_practica" element={<Layout2><PostulacionPractica /></Layout2>} />
+        <Route path="/leerforo" element={<Layout2><TemasList /></Layout2>} />
+        <Route path="/creartema" element={<Layout2><CrearTemaForm /></Layout2>} />
+        <Route path="/actualizarcomentarios" element={<Layout2><CommentEdit /></Layout2>} />
+        <Route path="/crearcomentario" element={<Layout2><CrearComentario /></Layout2>} />
+        <Route path="/respondercomentario" element={<Layout2><ReplyComment /></Layout2>} />
+
+
 
 
         {/* Rutas CRUD para las prácticas utilizando Layout3 */}
@@ -53,8 +68,7 @@ const App = () => {
         <Route path="/upractica" element={<Layout3><Dpractica /></Layout3>} />
         <Route path="/gpracticas" element={<Layout3><Gpracticas /></Layout3>} />
         <Route path="/logout-em" element={<Layout3><LogoutEm /></Layout3>} />
-        {/* Ruta para la página con opciones */}
-        <Route path="/main" element={<MainPage />} />
+
       </Routes>
     </Router>
   );
